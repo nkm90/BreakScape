@@ -9,6 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CongratulationsActivity"></activity>
+        <activity android:name=".Opt4Activity" />
+        <activity android:name=".Opt3Activity" />
+        <activity android:name=".Opt2Activity" />
+        <activity android:name=".Opt1Activity" />
+        <activity android:name=".BreakActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".IntroActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

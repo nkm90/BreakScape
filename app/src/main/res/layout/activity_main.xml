@@ -1,18 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tittlearea"
+        android:layout_weight="0.3">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/tittle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="BreakScape"
+                android:textAlignment="center"
+                android:textSize="55dp"
+                android:paddingTop="30dp"></TextView>
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="231dp"
+                android:layout_height="273dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tittle"
+                app:layout_constraintVertical_bias="0.702"
+                android:contentDescription="logo">
+
+            </ImageView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/buttonPanel"
+        android:layout_weight="0.7">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/start"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Start"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/leaders"></Button>
+
+            <Button
+                android:id="@+id/leaders"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Leaderboard"
+                app:layout_constraintTop_toBottomOf="@+id/start"
+                app:layout_constraintBottom_toTopOf="@+id/exit"
+                tools:layout_editor_absoluteX="10dp"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"></Button>
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Exit"
+                app:layout_constraintTop_toBottomOf="@+id/leaders"
+                tools:layout_editor_absoluteX="10dp"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"></Button>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+    
+
+</LinearLayout>

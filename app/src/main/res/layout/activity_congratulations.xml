@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CongratulationsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tittlearea"
+        android:layout_weight="0.7">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:text="You made it!"
+            android:textAlignment="center"
+            android:textSize="55dp">
+
+        </TextView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/workarea"
+        android:layout_weight="0.3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:text="Congratulations! You made it on:">
+
+        </TextView>
+
+    </RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/buttonPanel"
+        android:layout_weight="0.7"
+        android:layout_gravity="center_horizontal"
+        android:padding="25dp">
+
+        <Button
+            android:id="@+id/review"
+            android:layout_width="175dp"
+            android:layout_height="75dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:text="Send Review"></Button>
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="175dp"
+            android:layout_height="75dp"
+            app:layout_constraintLeft_toRightOf="@+id/review"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:text="Back to Menu"></Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
