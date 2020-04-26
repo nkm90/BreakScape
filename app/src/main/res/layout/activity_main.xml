@@ -1,91 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:background="#666666">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/tittlearea"
-        android:layout_weight="0.3">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <Button
+        android:id="@+id/start"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="@font/vt323"
+        android:text="Start"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-            <TextView
-                android:id="@+id/tittle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="BreakScape"
-                android:textAlignment="center"
-                android:textSize="55dp"
-                android:paddingTop="30dp"></TextView>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="79dp"
+        android:fontFamily="@font/vt323"
+        android:text="BreakScape"
+        android:textAlignment="center"
+        android:textColor="#32CD32"
+        android:textSize="65sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="231dp"
-                android:layout_height="273dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tittle"
-                app:layout_constraintVertical_bias="0.702"
-                android:contentDescription="logo">
+    <TextView
+        android:id="@+id/security"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:fontFamily="@font/vt323"
+        android:text="Security Alert!\nSecurity Alert!\nSecurity Alert!"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#32DC32"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
-            </ImageView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/buttonPanel"
-        android:layout_weight="0.7">
-        
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp"
-            android:layout_centerVertical="true"
-            android:layout_centerInParent="true">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="205dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/security"
+        app:srcCompat="@drawable/hacker_face" />
 
-            <Button
-                android:id="@+id/start"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="Start"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/leaders"></Button>
+    <Button
+        android:id="@+id/leaders"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="@font/vt323"
+        android:text="Leaderboard"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start" />
 
-            <Button
-                android:id="@+id/leaders"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="Leaderboard"
-                app:layout_constraintTop_toBottomOf="@+id/start"
-                app:layout_constraintBottom_toTopOf="@+id/exit"
-                tools:layout_editor_absoluteX="10dp"
-                android:layout_centerVertical="true"
-                android:layout_centerInParent="true"></Button>
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="@font/vt323"
+        android:text="Exit"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leaders" />
 
-            <Button
-                android:id="@+id/exit"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="Exit"
-                app:layout_constraintTop_toBottomOf="@+id/leaders"
-                tools:layout_editor_absoluteX="10dp"
-                android:layout_centerVertical="true"
-                android:layout_centerInParent="true"></Button>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </RelativeLayout>
-    
-
-</LinearLayout>

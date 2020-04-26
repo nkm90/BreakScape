@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class BreakActivity extends AppCompatActivity {
+public class BreakActivity extends AbsRuntimePermission {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -15,8 +15,10 @@
         <activity android:name=".Opt2Activity" />
         <activity android:name=".Opt1Activity" />
         <activity android:name=".BreakActivity" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".IntroActivity" />
+        <activity android:name=".MenuActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".IntroActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

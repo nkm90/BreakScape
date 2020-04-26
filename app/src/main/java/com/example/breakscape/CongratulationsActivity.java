@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class CongratulationsActivity extends AppCompatActivity {
+public class CongratulationsActivity extends AbsRuntimePermission {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

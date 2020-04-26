@@ -1,193 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MenuActivity">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/tittlearea"
-        android:layout_weight="0.75">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="20dp"
-            android:text="Different strikes"
-            android:textAlignment="center"
-            android:textSize="50dp">
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
 
-        </TextView>
+        android:paddingTop="20dp"
+        android:text="Complete each task"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/Intro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Intro"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/menuarea"
-        android:layout_weight="0.3">
+    <TextView
+        android:id="@+id/Intro"
+        android:layout_width="0dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="580dp"
+        android:width="10dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="0dp"
+        android:text="Little introduction for this page. like complete the following questsLittle introduction for this page. like complete the following questsLittle introduction for this page. like complete the following questsLittle introduction for this page. like complete the following questsLittle introduction for this page. like complete the following quests"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Title"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+    <Button
+        android:id="@+id/option3"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="100dp"
+        android:text="etc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option2" />
 
-            <Button
-                android:id="@+id/option1"
-                android:layout_width="300dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="92dp"
-                android:text="Access control"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.099"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/home"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:maxWidth="5dp"
+        android:text="Quit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Timer" />
 
-            <Button
-                android:id="@+id/option2"
-                android:layout_width="300dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="16dp"
-                android:text="Phising"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/option1">
-            </Button>
+    <ImageView
+        android:id="@+id/tick"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/option1"
+        app:layout_constraintTop_toBottomOf="@+id/Intro"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
 
-            <Button
-                android:id="@+id/option3"
-                android:layout_width="300dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="16dp"
-                android:text="Cryptography"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/option2">
-            </Button>
+    <Button
+        android:id="@+id/option1"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="100dp"
+        android:text="email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Intro" />
 
-            <Button
-                android:id="@+id/option4"
-                android:layout_width="300dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="16dp"
-                android:text="IoT: Internet of Things"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/option3"></Button>
+    <ImageView
+        android:id="@+id/tick1"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/option4"
+        app:layout_constraintTop_toBottomOf="@+id/tick2"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
 
-            <TextView
-                android:id="@+id/txt1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Little introduction for this page. like complete the following quests"
-                app:layout_constraintBottom_toTopOf="@+id/option1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/option2"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="100dp"
+        android:text="Access"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option1" />
 
-            <EditText
-                android:id="@+id/counter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="time"
-                android:text="60:00"
-                android:textAlignment="center"
-                android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/option4"
-                app:layout_constraintVertical_bias="0.666" />
+    <ImageView
+        android:id="@+id/tick3"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/option2"
+        app:layout_constraintTop_toBottomOf="@+id/tick"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
 
-            <ImageView
-                android:id="@+id/tick1"
-                android:layout_width="60dp"
-                android:layout_height="56dp"
-                android:layout_marginBottom="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/tick2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toEndOf="@+id/option1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.96"
-                app:srcCompat="@android:drawable/checkbox_on_background" />
+    <Button
+        android:id="@+id/breakscape"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="180dp"
+        android:maxWidth="50dp"
+        android:text="Break the scape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Timer" />
 
-            <ImageView
-                android:id="@+id/tick2"
-                android:layout_width="60dp"
-                android:layout_height="56dp"
-                android:layout_marginBottom="20dp"
-                app:layout_constraintBottom_toTopOf="@+id/tick3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toEndOf="@+id/option2"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@android:drawable/checkbox_on_background" />
+    <Button
+        android:id="@+id/option4"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="100dp"
+        android:text="usb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option3" />
 
-            <ImageView
-                android:id="@+id/tick3"
-                android:layout_width="60dp"
-                android:layout_height="56dp"
-                android:layout_marginBottom="20dp"
-                app:layout_constraintBottom_toTopOf="@+id/tick4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toEndOf="@+id/option3"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@android:drawable/checkbox_on_background" />
+    <TextView
+        android:id="@+id/Timer"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="140dp"
+        android:background="#009688"
+        android:padding="5dp"
+        android:text="60:00"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option4" />
 
-            <ImageView
-                android:id="@+id/tick4"
-                android:layout_width="60dp"
-                android:layout_height="56dp"
-                android:visibility="visible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toEndOf="@+id/option4"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.777"
-                app:srcCompat="@android:drawable/checkbox_on_background" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </RelativeLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/buttonPanel"
-        android:layout_weight="0.7"
-        android:layout_gravity="center_horizontal"
-        android:padding="25dp">
+    <ImageView
+        android:id="@+id/tick2"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/option3"
+        app:layout_constraintTop_toBottomOf="@+id/tick3"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
 
-        <Button
-            android:id="@+id/breakscape"
-            android:layout_width="175dp"
-            android:layout_height="75dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            android:background="@color/colorPrimary"
-            android:text="Break the Scape"></Button>
-
-        <Button
-            android:id="@+id/home"
-            android:layout_width="175dp"
-            android:layout_height="75dp"
-            app:layout_constraintLeft_toRightOf="@+id/breakscape"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            android:text="Leave the game"></Button>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,70 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".IntroActivity">
+    android:background="#666666"
+    android:textAlignment="center">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/tittlearea"
-        android:layout_weight="0.7">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/vt323"
+        android:text="Introduction"
+        android:textAlignment="center"
+        android:textColor="#32CD32"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="20dp"
-            android:text="Introduction"
-            android:textAlignment="center"
-            android:textSize="55dp">
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="234dp"
+        android:layout_height="272dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="63dp"
+        android:fontFamily="@font/vt323"
+        android:lineSpacingExtra="1sp"
+        android:text="Hi I am the Anonymous hacker. I have hacked into your system. To regain control complete all the puzzles within 60 minutes. If you don’t I will release all your data for the world. Enjoy! You may learn a thing or two about cyber security on the way! HAHAHAHA "
+        android:textAlignment="center"
+        android:textColor="#32CD32"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
-        </TextView>
+    <EditText
+        android:id="@+id/teamName"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="63dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="Enter team name"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intro" />
 
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/workarea"
-        android:layout_weight="0.3">
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="63dp"
+        android:fontFamily="@font/vt323"
+        android:text="*Please enter a valid name"
+        android:textColor="#F80404"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamName" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textAlignment="center"
-            android:text="The CEO of the comprany...">
+    <Button
+        android:id="@+id/start"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="63dp"
+        android:fontFamily="@font/vt323"
+        android:text="Begin"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/warning" />
 
-        </TextView>
-
-    </RelativeLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/buttonPanel"
-        android:layout_weight="0.7"
-        android:layout_gravity="center_horizontal"
-        android:padding="25dp">
-
-        <Button
-            android:id="@+id/start"
-            android:layout_width="175dp"
-            android:layout_height="75dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            android:text="Start"></Button>
-
-        <Button
-            android:id="@+id/home"
-            android:layout_width="175dp"
-            android:layout_height="75dp"
-            app:layout_constraintLeft_toRightOf="@+id/start"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            android:text="Back to Menu"></Button>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</LinearLayout>
+    <Button
+        android:id="@+id/home"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="63dp"
+        android:fontFamily="@font/vt323"
+        android:text="Back to Main Menu"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start" />
+</androidx.constraintlayout.widget.ConstraintLayout>
