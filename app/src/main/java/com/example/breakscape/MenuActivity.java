@@ -9,13 +9,11 @@ import android.view.View;
 import android.widget.Button;
 
 public class MenuActivity extends AbsRuntimePermission {
-    String teamName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        Intent intent = getIntent();
-        teamName = intent.getStringExtra("teamName");
         //linking the breakscape button to a variable to set the listener for click interations.
         Button resolve = (Button) findViewById(R.id.breakscape);
         resolve.setOnClickListener(new View.OnClickListener() {
@@ -26,6 +24,7 @@ public class MenuActivity extends AbsRuntimePermission {
         });
         //Linking the button to return to the main menu
         Button home =  (Button) findViewById(R.id.home);
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

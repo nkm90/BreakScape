@@ -1,47 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="#666666">
 
     <TextView
-        android:id="@+id/Title"
+        android:id="@+id/title"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:paddingTop="20dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/vt323"
         android:text="Complete each task"
         android:textAlignment="center"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/Intro"
+        android:textColor="#32CD32"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/intro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/Intro"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Intro"
+        android:id="@+id/intro"
         android:layout_width="0dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginBottom="580dp"
-        android:width="10dp"
-        android:paddingLeft="15dp"
-        android:paddingTop="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="0dp"
-        android:text="Little introduction for this page. like complete the following questsLittle introduction for this page. like complete the following questsLittle introduction for this page. like complete the following questsLittle introduction for this page. like complete the following questsLittle introduction for this page. like complete the following quests"
+        android:layout_height="123dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="400dp"
+        android:text="You have 60 minutes to complete all the puzzles Clink on the links to learn about a cybersecurity technique. These will help you to complete the puzzles. Begin!"
         android:textAlignment="center"
+        android:textColor="#32CD32"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Title"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <Button
         android:id="@+id/option3"
@@ -73,12 +70,12 @@
         android:layout_width="0dp"
         android:layout_height="41dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="39dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/option1"
-        app:layout_constraintTop_toBottomOf="@+id/Intro"
+        app:layout_constraintTop_toBottomOf="@+id/intro"
         app:srcCompat="@android:drawable/checkbox_on_background" />
 
     <Button
@@ -86,12 +83,13 @@
         android:layout_width="0dp"
         android:layout_height="46dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="100dp"
         android:text="email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Intro" />
+        app:layout_constraintTop_toBottomOf="@+id/intro" />
 
     <ImageView
         android:id="@+id/tick1"
@@ -181,5 +179,6 @@
         app:layout_constraintStart_toEndOf="@+id/option3"
         app:layout_constraintTop_toBottomOf="@+id/tick3"
         app:srcCompat="@android:drawable/checkbox_on_background" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

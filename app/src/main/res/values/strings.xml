@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">BreakScape</string>
+    <string name="main_title">BreakScape</string>
+    <string name="security_alert">Security Alert!\nSecurity Alert!\nSecurity Alert!</string>
+    <string name="start_btn">Start</string>
+    <string name="leaders_btn">Leaderboard</string>
+    <string name="exit_btn">Exit</string>
+
+
 </resources>

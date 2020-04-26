@@ -15,7 +15,7 @@ import java.util.Arrays;
 
 public class IntroActivity extends AbsRuntimePermission {
     TextView warning;
-    EditText teamName;
+    EditText input;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class IntroActivity extends AbsRuntimePermission {
             }
         });
 
-        teamName = findViewById(R.id.teamName);
+        input = findViewById(R.id.teamName);
 
 
         //Hide warning of invalid team name
@@ -49,10 +49,9 @@ public class IntroActivity extends AbsRuntimePermission {
     }
 
     public void start(View view) {
+        teamName = input.getText().toString();
         if (checkValidName()){
             Intent intent = new Intent(this, MenuActivity.class);
-            String name = teamName.getText().toString();
-            intent.putExtra("teamName", name);
             startActivity(intent);
         }
         else{
@@ -61,7 +60,7 @@ public class IntroActivity extends AbsRuntimePermission {
     }
 
     private boolean checkValidName() {
-        return teamName.getText().length() > 0;
+        return teamName.length() > 0;
     }
 
     public void home(View view){
