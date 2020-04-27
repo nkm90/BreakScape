@@ -8,8 +8,8 @@ import android.view.Display;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-public abstract class AbsRuntimePermission extends AppCompatActivity {
-     static String teamName;
+public abstract class AbsActivity extends AppCompatActivity {
+      static String teamName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,5 +22,7 @@ public abstract class AbsRuntimePermission extends AppCompatActivity {
             actionBar.hide();
         }
     }
+
+    
 
 }

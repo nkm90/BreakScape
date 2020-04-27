@@ -1,13 +1,11 @@
 package com.example.breakscape;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class BreakActivity extends AbsRuntimePermission {
+public class BreakActivity extends AbsActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
