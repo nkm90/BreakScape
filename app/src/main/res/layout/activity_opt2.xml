@@ -1,70 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Opt2Activity">
+    android:background="#666666">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/tittlearea"
-        android:layout_weight="0.7">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="82dp"
+        android:fontFamily="@font/vt323"
+        android:text="Access Control"
+        android:textAlignment="center"
+        android:textColor="#32CD32"
+        android:textSize="55sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="20dp"
-            android:text="Phising"
-            android:textAlignment="center"
-            android:textSize="55dp">
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="301dp"
+        android:layout_height="335dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/vt323"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..."
+        android:textAlignment="center"
+        android:textColor="#32CD32"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
-        </TextView>
+    <Button
+        android:id="@+id/next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="100dp"
+        android:text="Next page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/workarea"
-        android:layout_weight="0.3">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textAlignment="center"
-            android:text="Explanation of what is Phising and maybe the task">
-
-        </TextView>
-
-    </RelativeLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/buttonPanel"
-        android:layout_weight="0.7"
-        android:layout_gravity="center_horizontal"
-        android:padding="25dp">
-
-        <Button
-            android:id="@+id/next"
-            android:layout_width="175dp"
-            android:layout_height="75dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            android:text="Next page"></Button>
-
-        <Button
-            android:id="@+id/home"
-            android:layout_width="175dp"
-            android:layout_height="75dp"
-            app:layout_constraintLeft_toRightOf="@+id/next"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            android:text="Back to Menu"></Button>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</LinearLayout>
+    <Button
+        android:id="@+id/home"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="100dp"
+        android:text="Back to menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next" />
+</androidx.constraintlayout.widget.ConstraintLayout>
