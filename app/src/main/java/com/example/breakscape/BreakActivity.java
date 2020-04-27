@@ -12,7 +12,7 @@ public class BreakActivity extends AbsActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_break);
 
-        Button check = (Button) findViewById(R.id.check);
+        Button check = (Button) findViewById(R.id.enter);
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
