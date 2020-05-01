@@ -35,7 +35,7 @@
                 android:layout_width="177dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/vt323"
-                android:text="Team1"
+                android:text="gjfhgjhgjkghkjhkghklj"
                 android:textSize="30sp" />
 
             <TextView
@@ -62,7 +62,7 @@
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="177dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/vt323"
                 android:text="Team1"
@@ -92,7 +92,7 @@
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="177dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/vt323"
                 android:text="Team1"
@@ -122,7 +122,7 @@
 
             <TextView
                 android:id="@+id/textView12"
-                android:layout_width="177dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/vt323"
                 android:text="Team1"
@@ -152,7 +152,7 @@
 
             <TextView
                 android:id="@+id/textView15"
-                android:layout_width="177dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/vt323"
                 android:text="Team1"
@@ -182,7 +182,7 @@
 
             <TextView
                 android:id="@+id/textView18"
-                android:layout_width="177dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/vt323"
                 android:text="Team1"
@@ -212,7 +212,7 @@
 
             <TextView
                 android:id="@+id/textView21"
-                android:layout_width="177dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/vt323"
                 android:text="Team1"
@@ -242,7 +242,7 @@
 
             <TextView
                 android:id="@+id/textView24"
-                android:layout_width="177dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/vt323"
                 android:text="Team1"

@@ -13,5 +13,6 @@ public class Opt3Activity extends OptActivity {
         setContentView(R.layout.activity_opt3);
 
         setClickListeners();
+        startTimer();
     }
 }

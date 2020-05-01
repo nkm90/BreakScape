@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="0dp"
-        android:layout_height="82dp"
+        android:layout_width="354dp"
+        android:layout_height="63dp"
         android:fontFamily="@font/vt323"
         android:text="Phising"
         android:textAlignment="center"
@@ -21,11 +21,11 @@
 
     <TextView
         android:id="@+id/pg1"
-        android:layout_width="301dp"
-        android:layout_height="335dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="0dp"
+        android:layout_height="274dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:fontFamily="@font/vt323"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..."
         android:textAlignment="center"
@@ -37,11 +37,11 @@
 
     <TextView
         android:id="@+id/pg2"
-        android:layout_width="301dp"
-        android:layout_height="335dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="0dp"
+        android:layout_height="274dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:fontFamily="@font/vt323"
         android:text="diff text sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..."
         android:textAlignment="center"
@@ -49,31 +49,133 @@
         android:textSize="22sp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <Button
-        android:id="@+id/next"
+    <LinearLayout
+        android:id="@+id/input"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="100dp"
-        android:text="Next page"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pg1" />
-
-    <Button
-        android:id="@+id/home"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="100dp"
-        android:text="Back to menu"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/next" />
+        app:layout_constraintTop_toBottomOf="@+id/pg1">
+
+        <EditText
+            android:id="@+id/num1"
+            android:layout_width="128dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_weight="1"
+            android:background="#CECECE"
+            android:ems="10"
+            android:fontFamily="@font/vt323"
+            android:inputType="textPersonName"
+            android:text="1"
+            android:textAlignment="center"
+            android:textSize="50sp" />
+
+        <EditText
+            android:id="@+id/num2"
+            android:layout_width="128dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_weight="1"
+            android:background="#CECECE"
+            android:ems="10"
+            android:fontFamily="@font/vt323"
+            android:inputType="textPersonName"
+            android:text="1"
+            android:textAlignment="center"
+            android:textSize="50sp" />
+
+        <EditText
+            android:id="@+id/num3"
+            android:layout_width="128dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_weight="1"
+            android:background="#CECECE"
+            android:ems="10"
+            android:fontFamily="@font/vt323"
+            android:inputType="textPersonName"
+            android:text="1"
+            android:textAlignment="center"
+            android:textSize="50sp" />
+
+        <EditText
+            android:id="@+id/num4"
+            android:layout_width="128dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_weight="1"
+            android:background="#CECECE"
+            android:ems="10"
+            android:fontFamily="@font/vt323"
+            android:inputType="textPersonName"
+            android:text="1"
+            android:textAlignment="center"
+            android:textSize="50sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Timer"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="100dp"
+        android:background="#009688"
+        android:fontFamily="@font/vt323"
+        android:padding="5dp"
+        android:text="60:00"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/align" />
+
+    <LinearLayout
+        android:id="@+id/align"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input">
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/vt323"
+            android:text="Next Page"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/vt323"
+            android:text="Main Menu"
+            android:textSize="20sp" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

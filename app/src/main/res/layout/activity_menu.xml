@@ -30,10 +30,11 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="400dp"
+        android:fontFamily="@font/vt323"
         android:text="You have 60 minutes to complete all the puzzles Clink on the links to learn about a cybersecurity technique. These will help you to complete the puzzles. Begin!"
         android:textAlignment="center"
         android:textColor="#32CD32"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -64,6 +65,7 @@
         android:fontFamily="@font/vt323"
         android:maxWidth="5dp"
         android:text="Quit"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Timer" />
@@ -144,6 +146,7 @@
         android:fontFamily="@font/vt323"
         android:maxWidth="50dp"
         android:text="Break the scape"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Timer" />

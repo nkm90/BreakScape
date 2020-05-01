@@ -15,6 +15,7 @@ public class Opt1Activity extends OptActivity {
         setContentView(R.layout.activity_opt1);
 
         setClickListeners();
+        startTimer();
     }
 
 }

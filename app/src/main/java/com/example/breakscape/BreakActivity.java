@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class BreakActivity extends AbsActivity {
+public class BreakActivity extends Timer {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

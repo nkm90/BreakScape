@@ -13,6 +13,7 @@ public class Opt2Activity extends OptActivity {
         setContentView(R.layout.activity_opt2);
 
         setClickListeners();
+        startTimer();
     }
 
 }
