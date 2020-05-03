@@ -5,9 +5,25 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MenuActivity extends Timer {
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.Observable;
+import java.util.Observer;
+
+public class MenuActivity extends Timer implements PropertyChangeListener{
+
+    private static boolean option1Solved;
+    private static boolean option2Solved;
+    private static boolean option3Solved;
+    private static boolean option4Solved;
+
+    ImageView imgTick1;
+    ImageView imgTick2;
+    ImageView imgTick3;
+    ImageView imgTick4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,11 +77,21 @@ public class MenuActivity extends Timer {
         });
         timer = findViewById(R.id.Timer);
         startTimer();
+        setUpImages();
 
     }
+
+    private void setUpImages() {
+        imgTick1 = findViewById(R.id.tick1);
+        imgTick2 = findViewById(R.id.tick2);
+        imgTick3 = findViewById(R.id.tick3);
+        imgTick4 = findViewById(R.id.tick4);
+    }
+
     //Resolve method open the activity to the final window to provide the answer to the game
     public void resolve(View view){
         Intent intent = new Intent(this, BreakActivity.class);
+
         startActivity(intent);
     }
     //Home method just returns home and finish game. maybe worthy to find a double confirmation
@@ -75,23 +101,63 @@ public class MenuActivity extends Timer {
         startActivity(intent);
     }
     //Method to open the activity of the option 1 of the menu
-    public void option1(View view){
+    public void option1(View view) {
         Intent intent = new Intent(this, Opt1Activity.class);
-        startActivity(intent);
+        startIntent(intent, option1Solved);
     }
     //Method to open the activity of the option 2 of the menu
     public void option2(View view){
         Intent intent = new Intent(this, Opt2Activity.class);
-        startActivity(intent);
+        startIntent(intent, option2Solved);
     }
     //Method to open the activity of the option 3 of the menu
     public void option3(View view){
         Intent intent = new Intent(this, Opt3Activity.class);
-        startActivity(intent);
+        startIntent(intent, option3Solved);
     }
     //Method to open the activity of the option 4 of the menu
     public void option4(View view){
         Intent intent = new Intent(this, Opt4Activity.class);
+        startIntent(intent, option4Solved);
+    }
+
+    public void startIntent(Intent intent, boolean pageSolved){
+
+        if (pageSolved){
+            intent.putExtra("pageSolved", true);
+        }
+        else{
+            intent.putExtra("pageSolved", false);
+        }
         startActivity(intent);
     }
+
+
+    @Override
+    public void propertyChange(PropertyChangeEvent evt) {
+        String s = (evt.getPropertyName());
+        setPageSolved(s.charAt(s.length()-1), (boolean) evt.getNewValue());
+    }
+
+    private void setPageSolved(char pgNum, boolean value){
+    switch (pgNum){
+
+        case'1':
+            option1Solved=value;
+            break;
+        case'2':
+            option2Solved=value;
+            break;
+        case'3':
+            option3Solved=value;
+            break;
+        case'4':
+            option4Solved=value;
+            break;
+
+
+        }
+}
+
+
 }

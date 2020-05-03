@@ -12,10 +12,15 @@ public class Opt1Activity extends OptActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_opt1);
 
-        setClickListeners();
-        startTimer();
+        setContentView(R.layout.activity_opt1);
+        setSolved(getIntent().getExtras().getBoolean("pageSolved"));
+        setUpElements();
+        addPropertyChangeListener(new MenuActivity());
+
+
+
+
     }
 
 }

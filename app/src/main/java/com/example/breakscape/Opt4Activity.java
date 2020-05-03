@@ -11,9 +11,10 @@ public class Opt4Activity extends OptActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opt4);
+        setUpElements();
+        addPropertyChangeListener(new MenuActivity());
 
-        setClickListeners();
-        startTimer();
+
     }
 
 

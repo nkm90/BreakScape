@@ -11,9 +11,10 @@ public class Opt2Activity extends OptActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opt2);
+        setUpElements();
+        addPropertyChangeListener(new MenuActivity());
 
-        setClickListeners();
-        startTimer();
+
     }
 
 }
