@@ -178,4 +178,18 @@
             android:textSize="20sp" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="Show me the emails"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Timer"
+        app:layout_constraintVertical_bias="0.212" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -45,6 +45,10 @@ public abstract class OptActivity extends Timer{
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
     }
+    public void game(View view){
+        Intent intent = new Intent(this, Phishing.class);
+        startActivity(intent);
+    }
 
     public void setClickListeners(){
         timer = findViewById(R.id.Timer);
@@ -61,6 +65,14 @@ public abstract class OptActivity extends Timer{
             @Override
             public void onClick(View v) {
                 home(v);
+            }
+        });
+
+        Button game = (Button) findViewById(R.id.game);
+        game.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                game(v);
             }
         });
     }
