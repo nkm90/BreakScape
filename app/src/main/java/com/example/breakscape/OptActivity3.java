@@ -1,26 +1,26 @@
 package com.example.breakscape;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
-public class Opt1Activity extends OptActivity {
+import java.beans.PropertyChangeListener;
+
+public class OptActivity3 extends OptActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_opt1);
+        setContentView(R.layout.activity_opt3);
+        setCode();
         setSolved(getIntent().getExtras().getBoolean("pageSolved"));
         setUpElements();
         addPropertyChangeListener(new MenuActivity());
 
 
-
-
     }
-
+    @Override
+    public void setCode() {
+        code = "1234";
+    }
 }

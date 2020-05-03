@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.TextView;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -22,10 +21,12 @@ public abstract class OptActivity extends Timer  {
     private LinearLayout inputArea;
     private LinearLayout nav;
     private List<EditText> inputs;
-    private String code;
+    String code;
     private boolean solved;
 
+
     private PropertyChangeSupport support;
+
 
 
 
@@ -34,7 +35,6 @@ public abstract class OptActivity extends Timer  {
         nav = findViewById(R.id.align);
         timer = findViewById(R.id.Timer);
         pgSwitch = (Button) findViewById(R.id.next);
-        code = "1234";
         support = new PropertyChangeSupport(this);
         setInputs();
         setClickListeners();
@@ -42,7 +42,6 @@ public abstract class OptActivity extends Timer  {
 
         if (!solved){
             checkCodeEverySec();
-
         }
         else{
             codeCorrect();
@@ -51,6 +50,12 @@ public abstract class OptActivity extends Timer  {
     public void addPropertyChangeListener(PropertyChangeListener pcl) {
         support.addPropertyChangeListener(pcl);
     }
+
+    public void addObserver(){
+        this.addObserver();
+    }
+
+    public abstract void setCode();
 
 
     public void next(){
@@ -103,7 +108,7 @@ public abstract class OptActivity extends Timer  {
 
     public void checkCodeEverySec(){
         if (timer != null) {
-            new CountDownTimer(time, 1000) {
+            new CountDownTimer(time, 500) {
 
                 public void onTick(long millisUntilFinished) {
                     checkCode();
@@ -128,6 +133,7 @@ public abstract class OptActivity extends Timer  {
 
         }
         codeCorrect();
+
     }
 
     private void codeCorrect(){

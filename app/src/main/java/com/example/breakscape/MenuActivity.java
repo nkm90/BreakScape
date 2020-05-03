@@ -2,16 +2,14 @@ package com.example.breakscape;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.util.Observable;
-import java.util.Observer;
+import java.io.Serializable;
 
 public class MenuActivity extends Timer implements PropertyChangeListener{
 
@@ -20,7 +18,6 @@ public class MenuActivity extends Timer implements PropertyChangeListener{
     private static boolean option3Solved;
     private static boolean option4Solved;
 
-    ImageView imgTick1;
     ImageView imgTick2;
     ImageView imgTick3;
     ImageView imgTick4;
@@ -82,10 +79,28 @@ public class MenuActivity extends Timer implements PropertyChangeListener{
     }
 
     private void setUpImages() {
-        imgTick1 = findViewById(R.id.tick1);
-        imgTick2 = findViewById(R.id.tick2);
-        imgTick3 = findViewById(R.id.tick3);
-        imgTick4 = findViewById(R.id.tick4);
+        ImageView imgTick1 = findViewById(R.id.tick1);
+        ImageView imgTick2 = findViewById(R.id.tick2);
+        ImageView imgTick3 = findViewById(R.id.tick3);
+        ImageView imgTick4 = findViewById(R.id.tick4);
+        ImageView imgBox1 = findViewById(R.id.box1);
+        ImageView imgBox2 = findViewById(R.id.box2);
+        ImageView imgBox3 = findViewById(R.id.box3);
+        ImageView imgBox4 = findViewById(R.id.box4);
+
+        boxOrTick(imgTick1, imgBox1, option1Solved);
+        boxOrTick(imgTick2, imgBox2, option2Solved);
+        boxOrTick(imgTick3, imgBox3, option3Solved);
+        boxOrTick(imgTick4, imgBox4, option4Solved);
+
+        //Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+    }
+
+    private void boxOrTick(ImageView imgViewTick, ImageView imgViewBox, boolean bool){
+        if(bool){
+            imgViewTick.setVisibility(View.VISIBLE);
+            imgViewBox.setVisibility(View.INVISIBLE);
+        }
     }
 
     //Resolve method open the activity to the final window to provide the answer to the game
@@ -102,22 +117,22 @@ public class MenuActivity extends Timer implements PropertyChangeListener{
     }
     //Method to open the activity of the option 1 of the menu
     public void option1(View view) {
-        Intent intent = new Intent(this, Opt1Activity.class);
+        Intent intent = new Intent(this, OptActivity1.class);
         startIntent(intent, option1Solved);
     }
     //Method to open the activity of the option 2 of the menu
     public void option2(View view){
-        Intent intent = new Intent(this, Opt2Activity.class);
+        Intent intent = new Intent(this, OptActivity2.class);
         startIntent(intent, option2Solved);
     }
     //Method to open the activity of the option 3 of the menu
     public void option3(View view){
-        Intent intent = new Intent(this, Opt3Activity.class);
+        Intent intent = new Intent(this, OptActivity3.class);
         startIntent(intent, option3Solved);
     }
     //Method to open the activity of the option 4 of the menu
     public void option4(View view){
-        Intent intent = new Intent(this, Opt4Activity.class);
+        Intent intent = new Intent(this, OptActivity4.class);
         startIntent(intent, option4Solved);
     }
 
@@ -129,6 +144,7 @@ public class MenuActivity extends Timer implements PropertyChangeListener{
         else{
             intent.putExtra("pageSolved", false);
         }
+
         startActivity(intent);
     }
 

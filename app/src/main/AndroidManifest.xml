@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CongratulationsActivity"></activity>
-        <activity android:name=".Opt4Activity" />
-        <activity android:name=".Opt3Activity" />
-        <activity android:name=".Opt2Activity" />
-        <activity android:name=".Opt1Activity" />
+        <activity android:name=".OptActivity4" />
+        <activity android:name=".OptActivity3" />
+        <activity android:name=".OptActivity2" />
+        <activity android:name=".OptActivity1" />
         <activity android:name=".BreakActivity" />
         <activity android:name=".MenuActivity"
             android:screenOrientation="portrait"/>
