@@ -12,10 +12,6 @@
         <activity android:name=".FullActivity"></activity>
         <activity android:name=".Phishing" />
         <activity android:name=".CongratulationsActivity" />
-        <activity android:name=".Opt4Activity" />
-        <activity android:name=".Opt3Activity" />
-        <activity android:name=".Opt2Activity" />
-        <activity android:name=".Opt1Activity" />
         <activity android:name=".BreakActivity" />
         <activity
             android:name=".MenuActivity"
