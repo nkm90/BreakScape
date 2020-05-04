@@ -71,17 +71,32 @@
         app:layout_constraintTop_toBottomOf="@+id/Timer" />
 
     <ImageView
-        android:id="@+id/tick"
+        android:id="@+id/tick1"
         android:layout_width="0dp"
         android:layout_height="41dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="39dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/option1"
         app:layout_constraintTop_toBottomOf="@+id/intro"
         app:srcCompat="@android:drawable/checkbox_on_background" />
+
+    <ImageView
+        android:id="@+id/box1"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="39dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/option1"
+        app:layout_constraintTop_toBottomOf="@+id/intro"
+        app:srcCompat="@android:drawable/checkbox_off_background" />
 
     <Button
         android:id="@+id/option1"
@@ -99,7 +114,20 @@
         app:layout_constraintTop_toBottomOf="@+id/intro" />
 
     <ImageView
-        android:id="@+id/tick1"
+        android:id="@+id/tick4"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/option4"
+        app:layout_constraintTop_toBottomOf="@+id/tick3"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
+
+    <ImageView
+        android:id="@+id/box4"
         android:layout_width="0dp"
         android:layout_height="41dp"
         android:layout_marginStart="30dp"
@@ -107,8 +135,9 @@
         android:layout_marginEnd="39dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/option4"
-        app:layout_constraintTop_toBottomOf="@+id/tick2"
-        app:srcCompat="@android:drawable/checkbox_on_background" />
+        app:layout_constraintTop_toBottomOf="@+id/tick3"
+        app:srcCompat="@android:drawable/checkbox_off_background" />
+
 
     <Button
         android:id="@+id/option2"
@@ -125,16 +154,30 @@
         app:layout_constraintTop_toBottomOf="@+id/option1" />
 
     <ImageView
-        android:id="@+id/tick3"
+        android:id="@+id/tick2"
         android:layout_width="0dp"
         android:layout_height="41dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="39dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/option2"
-        app:layout_constraintTop_toBottomOf="@+id/tick"
+        app:layout_constraintTop_toBottomOf="@+id/tick1"
         app:srcCompat="@android:drawable/checkbox_on_background" />
+
+    <ImageView
+        android:id="@+id/box2"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/option2"
+        app:layout_constraintTop_toBottomOf="@+id/box1"
+        app:srcCompat="@android:drawable/checkbox_off_background" />
 
     <Button
         android:id="@+id/breakscape"
@@ -183,7 +226,19 @@
         app:layout_constraintTop_toBottomOf="@+id/option4" />
 
     <ImageView
-        android:id="@+id/tick2"
+        android:id="@+id/tick3"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/option3"
+        app:layout_constraintTop_toBottomOf="@+id/tick2"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
+    <ImageView
+        android:id="@+id/box3"
         android:layout_width="0dp"
         android:layout_height="41dp"
         android:layout_marginStart="30dp"
@@ -191,8 +246,8 @@
         android:layout_marginEnd="39dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/option3"
-        app:layout_constraintTop_toBottomOf="@+id/tick3"
-        app:srcCompat="@android:drawable/checkbox_on_background" />
+        app:layout_constraintTop_toBottomOf="@+id/box2"
+        app:srcCompat="@android:drawable/checkbox_off_background" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
