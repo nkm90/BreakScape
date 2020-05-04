@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <LinearLayout android:weightSum="1" android:orientation="vertical" android:background="#666666" tools:context=".Phishing" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    -<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent" android:layout_weight="0.7" android:id="@+id/tittle">
+
+    <TextView android:layout_height="match_parent" android:layout_width="match_parent" android:padding="20dp" android:textColor="#32CD32" android:fontFamily="@font/vt323" android:textAlignment="center" android:textSize="80sp" android:text="Phishing"> </TextView>
+
+</RelativeLayout>
+
+
+    -<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent" android:layout_weight="0.3" android:id="@+id/gridarea">
+
+    <GridView android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/gridview" android:padding="10dp" android:numColumns="2" android:gravity="center" android:columnWidth="100dp"> </GridView>
+
+</RelativeLayout>
+
+</LinearLayout>
