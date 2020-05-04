@@ -14,6 +14,8 @@
         android:id="@+id/textview"
         android:gravity="center"
         android:textSize="20sp"
+        android:fontFamily="@font/vt323"
+        android:textColor="#32CD32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

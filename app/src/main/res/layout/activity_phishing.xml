@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Phishing"
+    android:background="#666666"
     android:orientation="vertical"
     android:weightSum="1">
 
@@ -17,8 +18,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Phishing"
-            android:textSize="60sp"
+            android:textSize="80sp"
             android:textAlignment="center"
+            android:fontFamily="@font/vt323"
+            android:textColor="#32CD32"
             android:padding="20dp">
 
         </TextView>
