@@ -1,20 +1,18 @@
 package com.example.breakscape;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class BreakActivity extends AbsRuntimePermission {
+public class BreakActivity extends Timer {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_break);
 
-        Button check = (Button) findViewById(R.id.check);
+        Button check = (Button) findViewById(R.id.enter);
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

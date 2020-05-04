@@ -9,16 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CongratulationsActivity"></activity>
+        <activity android:name=".FullActivity"></activity>
+        <activity android:name=".Phishing" />
+        <activity android:name=".CongratulationsActivity" />
         <activity android:name=".Opt4Activity" />
         <activity android:name=".Opt3Activity" />
         <activity android:name=".Opt2Activity" />
         <activity android:name=".Opt1Activity" />
         <activity android:name=".BreakActivity" />
-        <activity android:name=".MenuActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".IntroActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".MenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IntroActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +30,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LeadersActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
