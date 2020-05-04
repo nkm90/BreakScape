@@ -27,9 +27,7 @@ public abstract class OptActivity extends Timer  {
 
     private PropertyChangeSupport support;
 
-
-
-
+    //set up all the elements immediately after onCreate method
     public void setUpElements() {
         inputArea = findViewById(R.id.input);
         nav = findViewById(R.id.align);
@@ -44,21 +42,36 @@ public abstract class OptActivity extends Timer  {
             checkCodeEverySec();
         }
         else{
-            codeCorrect();
+            pageAlreadySolved();
         }
     }
     public void addPropertyChangeListener(PropertyChangeListener pcl) {
         support.addPropertyChangeListener(pcl);
     }
 
-    public void addObserver(){
-        this.addObserver();
-    }
-
+    //Each option activity needs to set own code
     public abstract void setCode();
 
+    public void setClickListeners(){
 
-    public void next(){
+        pgSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switchPages();
+            }
+        });
+
+        Button home = (Button) findViewById(R.id.home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                home(v);
+            }
+        });
+    }
+
+
+    public void switchPages(){
         TextView pg1 =  findViewById(R.id.pg1);
         TextView pg2 =  findViewById(R.id.pg2);
 
@@ -83,29 +96,14 @@ public abstract class OptActivity extends Timer  {
             page1Showing = true;
         }
     }
+
     public void home(View view){
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
     }
 
-    public void setClickListeners(){
 
-        pgSwitch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                next();
-            }
-        });
-
-        Button home = (Button) findViewById(R.id.home);
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                home(v);
-            }
-        });
-    }
-
+    //check code every 500ms to see if it has been solved
     public void checkCodeEverySec(){
         if (timer != null) {
             new CountDownTimer(time, 500) {
@@ -135,25 +133,35 @@ public abstract class OptActivity extends Timer  {
         codeCorrect();
 
     }
-
+    //if code is correct format text and fire property change listener to MenuActivity
     private void codeCorrect(){
+        for (EditText et:inputs) {
+            textFormatOnceSolved(et);
+        }
+        support.firePropertyChange(getClass().toString(), this.solved, true);
+        solved = true;
+    }
+
+    private void textFormatOnceSolved(EditText et){
+        et.setTextColor(Color.RED);
+        et.setFocusable(false);
+    }
+
+    //Page has already been solved. Set text to correct code and format to show it has been solved
+    private void pageAlreadySolved(){
         int i =0;
         for (EditText et:inputs) {
             char[] c = new char[1];
             c [0] = code.charAt(i);
-            et.setTextColor(Color.RED);
-            et.setFocusable(false);
             et.setText(c, 0, 1);
+            textFormatOnceSolved(et);
             i++;
 
         }
-
-        support.firePropertyChange(getClass().toString(), this.solved, true);
-        solved = true;
-
     }
 
-    protected void setInputs(){
+    //set up edit text boxes - for code input - into an ArrayList
+    private void setInputs(){
         inputs = new ArrayList<>();
         for (int i =0; i < 4; i++){
             EditText txt = (EditText) inputArea.getChildAt(i);

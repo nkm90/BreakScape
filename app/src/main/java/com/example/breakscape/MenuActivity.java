@@ -93,9 +93,9 @@ public class MenuActivity extends Timer implements PropertyChangeListener{
         boxOrTick(imgTick3, imgBox3, option3Solved);
         boxOrTick(imgTick4, imgBox4, option4Solved);
 
-        //Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-    }
 
+    }
+    //switch the images depending if the task has been completed
     private void boxOrTick(ImageView imgViewTick, ImageView imgViewBox, boolean bool){
         if(bool){
             imgViewTick.setVisibility(View.VISIBLE);
@@ -106,7 +106,6 @@ public class MenuActivity extends Timer implements PropertyChangeListener{
     //Resolve method open the activity to the final window to provide the answer to the game
     public void resolve(View view){
         Intent intent = new Intent(this, BreakActivity.class);
-
         startActivity(intent);
     }
     //Home method just returns home and finish game. maybe worthy to find a double confirmation
@@ -135,7 +134,7 @@ public class MenuActivity extends Timer implements PropertyChangeListener{
         Intent intent = new Intent(this, OptActivity4.class);
         startIntent(intent, option4Solved);
     }
-
+    //send intent with info as to whether the page has already been solved
     public void startIntent(Intent intent, boolean pageSolved){
 
         if (pageSolved){
@@ -148,13 +147,14 @@ public class MenuActivity extends Timer implements PropertyChangeListener{
         startActivity(intent);
     }
 
-
+    //Listen to OptActivity class - if variable solved has been changed set the relevant option to be solved
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         String s = (evt.getPropertyName());
         setPageSolved(s.charAt(s.length()-1), (boolean) evt.getNewValue());
     }
 
+    //Depending on page solved set relevant boolean(option1solved, option2solved etc...)
     private void setPageSolved(char pgNum, boolean value){
     switch (pgNum){
 
