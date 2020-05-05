@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-    <LinearLayout android:weightSum="1" android:orientation="vertical" android:background="#666666" tools:context=".Phishing" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#666666"
+    android:orientation="vertical"
+    tools:context=".Phishing">
 
 
-    -<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent" android:layout_weight="0.7" android:id="@+id/tittle">
+        <RelativeLayout
+            android:id="@+id/gridarea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView android:layout_height="match_parent" android:layout_width="match_parent" android:padding="20dp" android:textColor="#32CD32" android:fontFamily="@font/vt323" android:textAlignment="center" android:textSize="80sp" android:text="Phishing"> </TextView>
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="100dp"
+                android:gravity="center"
+                android:numColumns="3"
+                android:padding="10dp"> </GridView>
 
-</RelativeLayout>
-
-
-    -<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent" android:layout_weight="0.3" android:id="@+id/gridarea">
-
-    <GridView android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/gridview" android:padding="10dp" android:numColumns="2" android:gravity="center" android:columnWidth="100dp"> </GridView>
-
-</RelativeLayout>
+        </RelativeLayout>
 
 </LinearLayout>

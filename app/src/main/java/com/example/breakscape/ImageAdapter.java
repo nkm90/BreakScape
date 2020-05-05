@@ -34,7 +34,6 @@ public class ImageAdapter extends BaseAdapter {
     public Integer[] images = {
             R.drawable.g1, R.drawable.s1, R.drawable.g2, R.drawable.g3,
             R.drawable.s2, R.drawable.g4, R.drawable.g5, R.drawable.g6,
-            R.drawable.g7, R.drawable.g8, R.drawable.g9, R.drawable.s3,
-            R.drawable.g10, R.drawable.g11, R.drawable.s4, R.drawable.g12
+            R.drawable.s4, R.drawable.g8, R.drawable.g9, R.drawable.s3
     };
 }
