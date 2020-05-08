@@ -3,43 +3,33 @@
    <manifest package="com.example.breakscape" xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    -<application android:theme="@style/AppTheme" android:supportsRtl="true" android:roundIcon="@mipmap/ic_launcher_round" android:label="@string/main_title" android:icon="@mipmap/ic_launcher" android:allowBackup="true">
+    <application android:theme="@style/AppTheme" android:supportsRtl="true" android:roundIcon="@mipmap/ic_launcher_round" android:label="@string/main_title" android:icon="@mipmap/ic_launcher" android:allowBackup="true">
 
-    <activity android:name=".FullActivity"
-        android:screenOrientation="portrait"/>
+    <activity android:name=".FullActivity" android:screenOrientation="portrait"/>
 
-    <activity android:name=".Phishing"
-        android:screenOrientation="portrait"/>
+    <activity android:name=".Phishing" android:screenOrientation="portrait"/>
 
-    <activity android:name=".CongratulationsActivity"
-        android:screenOrientation="portrait"/>
+    <activity android:name=".CongratulationsActivity" android:screenOrientation="portrait"/>
 
-    <activity android:name=".OptActivity4"
-        android:screenOrientation="portrait"/>
+    <activity android:name=".OptActivity4" android:screenOrientation="portrait"/>
 
-    <activity android:name=".OptActivity3"
-        android:screenOrientation="portrait"/>
+    <activity android:name=".OptActivity3" android:screenOrientation="portrait"/>
 
-    <activity android:name=".OptActivity2"
-        android:screenOrientation="portrait"/>
+    <activity android:name=".OptActivity2" android:screenOrientation="portrait"/>
 
-    <activity android:name=".OptActivity1"
-        android:screenOrientation="portrait"/>
+    <activity android:name=".OptActivity1" android:screenOrientation="portrait"/>
 
-    <activity android:name=".BreakActivity"
-        android:screenOrientation="portrait"/>
+    <activity android:name=".BreakActivity" android:screenOrientation="portrait"/>
 
-    <activity android:name=".MenuActivity"
-        android:screenOrientation="portrait"/>
+    <activity android:name=".MenuActivity" android:screenOrientation="portrait"/>
 
-    <activity android:name=".IntroActivity"
-        android:screenOrientation="portrait"/>
+    <activity android:name=".IntroActivity" android:screenOrientation="portrait"/>
 
 
-    -<activity android:name=".MainActivity">
+    <activity android:name=".MainActivity">
 
 
-    -<intent-filter>
+    <intent-filter>
 
     <action android:name="android.intent.action.MAIN"/>
 
