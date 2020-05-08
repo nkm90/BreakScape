@@ -100,6 +100,7 @@ public abstract class OptActivity extends Timer  {
     public void home(View view){
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
+        this.finish();
     }
 
 
