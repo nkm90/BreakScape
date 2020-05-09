@@ -19,6 +19,7 @@ public class Timer extends AbsActivity{
 
                 public void onFinish() {
                     timer.setText("You Lose!");
+                    //switch to game over page
                 }
             }.start();
         }

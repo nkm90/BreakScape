@@ -1,9 +1,11 @@
 package com.example.breakscape;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class OptActivity1 extends OptActivity {
 
@@ -11,7 +13,8 @@ public class OptActivity1 extends OptActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setCode();
+        populateCode();
+        populateHintNumber();
         setContentView(R.layout.activity_opt1);
         setSolved(getIntent().getExtras().getBoolean("pageSolved"));
         setUpElements();
@@ -32,7 +35,14 @@ public class OptActivity1 extends OptActivity {
     }
 
     @Override
-    public void setCode() {
-        code = "1345";
+    public void populateCode() {
+        setCode("1345");
     }
+
+    @Override
+    public void populateHintNumber(){
+        setHintNumber(3);
+    }
+
+
 }

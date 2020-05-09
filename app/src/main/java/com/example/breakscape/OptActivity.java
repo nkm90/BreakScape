@@ -20,8 +20,9 @@ public abstract class OptActivity extends Timer  {
     private Button pgSwitch;
     private LinearLayout inputArea;
     private LinearLayout nav;
-    private List<EditText> inputs;
-    String code;
+    List<EditText> inputs;
+    private String code;
+    private int hintNumber;
     private boolean solved;
 
 
@@ -37,7 +38,10 @@ public abstract class OptActivity extends Timer  {
         setInputs();
         setClickListeners();
         startTimer();
+        checkIfPageIsSolved();
+    }
 
+    private void checkIfPageIsSolved(){
         if (!solved){
             checkCodeEverySec();
         }
@@ -45,22 +49,23 @@ public abstract class OptActivity extends Timer  {
             pageAlreadySolved();
         }
     }
+
     public void addPropertyChangeListener(PropertyChangeListener pcl) {
         support.addPropertyChangeListener(pcl);
     }
 
     //Each option activity needs to set own code
-    public abstract void setCode();
+    public abstract void populateCode();
+    //Hint number indicates the number to break final code - Color is set to green
+    public abstract void populateHintNumber();
 
     public void setClickListeners(){
-
         pgSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switchPages();
             }
         });
-
         Button home = (Button) findViewById(R.id.home);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +73,11 @@ public abstract class OptActivity extends Timer  {
                 home(v);
             }
         });
+    }
+
+    public void home(View view){
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
     }
 
 
@@ -97,23 +107,17 @@ public abstract class OptActivity extends Timer  {
         }
     }
 
-    public void home(View view){
-        Intent intent = new Intent(this, MenuActivity.class);
-        startActivity(intent);
-    }
+
 
 
     //check code every 500ms to see if it has been solved
     public void checkCodeEverySec(){
         if (timer != null) {
             new CountDownTimer(time, 500) {
-
                 public void onTick(long millisUntilFinished) {
                     checkCode();
                 }
-
                 public void onFinish() {
-
                 }
             }.start();
         }
@@ -122,40 +126,42 @@ public abstract class OptActivity extends Timer  {
 
     protected void checkCode(){
         for( int i=0; i < inputs.size(); i++){
-
             String text = inputs.get(i).getText().toString();
             if(text.length() > 0){
-                char c = text.charAt(0);
-                if(c != code.charAt(i)) return;
+                if(text.charAt(0) != code.charAt(i)) return;
+            }else{
+                return;
             }
-
         }
         codeCorrect();
-
     }
+
     //if code is correct format text and fire property change listener to MenuActivity
     private void codeCorrect(){
-        for (EditText et:inputs) {
-            textFormatOnceSolved(et);
+        for (int i= 0; i < inputs.size(); i++) {
+            textFormatOnceSolved(inputs.get(i),i);
         }
         support.firePropertyChange(getClass().toString(), this.solved, true);
         solved = true;
     }
 
-    private void textFormatOnceSolved(EditText et){
-        et.setTextColor(Color.RED);
+    private void textFormatOnceSolved(EditText et, int index){
+        if(index == hintNumber) {
+            et.setTextColor(Color.GREEN);
+        }
+        else{
+            et.setTextColor(Color.RED);
+        }
         et.setFocusable(false);
     }
 
     //Page has already been solved. Set text to correct code and format to show it has been solved
-    private void pageAlreadySolved(){
-        int i =0;
-        for (EditText et:inputs) {
+    void pageAlreadySolved(){
+        for (int i= 0; i < inputs.size(); i++) {
             char[] c = new char[1];
             c [0] = code.charAt(i);
-            et.setText(c, 0, 1);
-            textFormatOnceSolved(et);
-            i++;
+            inputs.get(i).setText(c, 0, 1);
+            textFormatOnceSolved(inputs.get(i), i);
 
         }
     }
@@ -177,5 +183,15 @@ public abstract class OptActivity extends Timer  {
         solved =solve;
     }
 
+    public void setCode(String newCode){
+        code = newCode.substring(0,4);
+    }
+
+    public void setHintNumber(int newHintNumber){
+        while(newHintNumber >= 10){
+            newHintNumber /=10;
+        }
+        hintNumber = newHintNumber;
+    }
 
 }
