@@ -39,7 +39,7 @@ public class OptActivity3 extends OptActivity {
 
     @Override
     public void populateCode() {
-        setCode("1345");
+        setCode("7528");
     }
 
     @Override
