@@ -188,9 +188,6 @@ public abstract class OptActivity extends Timer  {
     }
 
     public void setHintNumber(int newHintNumber){
-        while(newHintNumber >= 10){
-            newHintNumber /=10;
-        }
         hintNumber = newHintNumber;
     }
 
