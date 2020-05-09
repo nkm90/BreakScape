@@ -21,7 +21,22 @@ public class OptActivity3 extends OptActivity {
         setUpElements();
         addPropertyChangeListener(new MenuActivity());
 
+        Button game = (Button) findViewById(R.id.game);
+        game.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                game(v);
+            }
+        });
+
     }
+
+    private void game(View v) {
+        Intent intent = new Intent(this, EncryptionActivity.class);
+        startActivity(intent);
+    }
+
+
     @Override
     public void populateCode() {
         setCode("1345");
