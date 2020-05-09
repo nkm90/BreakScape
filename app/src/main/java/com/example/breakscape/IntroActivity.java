@@ -46,6 +46,7 @@ public class IntroActivity extends Timer {
         teamName = input.getText().toString();
         if (checkValidName()){
             Intent intent = new Intent(this, MenuActivity.class);
+            this.finish();
             startActivity(intent);
         }
         else{

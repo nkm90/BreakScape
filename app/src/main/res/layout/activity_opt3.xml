@@ -11,7 +11,7 @@
         android:layout_width="354dp"
         android:layout_height="63dp"
         android:fontFamily="@font/vt323"
-        android:text="Malware"
+        android:text="Encryption"
         android:textAlignment="center"
         android:textColor="#32CD32"
         android:textSize="55sp"
@@ -79,6 +79,7 @@
             android:fontFamily="@font/vt323"
             android:inputType="textPersonName"
             android:text="1"
+            android:maxLength="1"
             android:textAlignment="center"
             android:textSize="50sp" />
 
@@ -94,6 +95,7 @@
             android:fontFamily="@font/vt323"
             android:inputType="textPersonName"
             android:text="1"
+            android:maxLength="1"
             android:textAlignment="center"
             android:textSize="50sp" />
 
@@ -109,6 +111,7 @@
             android:fontFamily="@font/vt323"
             android:inputType="textPersonName"
             android:text="1"
+            android:maxLength="1"
             android:textAlignment="center"
             android:textSize="50sp" />
 
@@ -124,6 +127,7 @@
             android:fontFamily="@font/vt323"
             android:inputType="textPersonName"
             android:text="1"
+            android:maxLength="1"
             android:textAlignment="center"
             android:textSize="50sp" />
 
@@ -177,5 +181,16 @@
             android:text="Main Menu"
             android:textSize="20sp" />
     </LinearLayout>
+    <Button
+        android:id="@+id/game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Show me the evidences"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Timer"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

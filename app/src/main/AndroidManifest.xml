@@ -1,58 +1,61 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.breakscape">
 
-   <manifest package="com.example.breakscape" xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/main_title"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".fullEncActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".FullActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Phishing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EncryptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CongratulationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OptActivity4"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OptActivity3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OptActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OptActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BreakActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".IntroActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LeadersActivity" />
 
-    -<application android:theme="@style/AppTheme" android:supportsRtl="true" android:roundIcon="@mipmap/ic_launcher_round" android:label="@string/main_title" android:icon="@mipmap/ic_launcher" android:allowBackup="true">
-
-    <activity android:name=".FullActivity"
-        android:screenOrientation="portrait"/>
-
-    <activity android:name=".Phishing"
-        android:screenOrientation="portrait"/>
-
-    <activity android:name=".CongratulationsActivity"
-        android:screenOrientation="portrait"/>
-
-    <activity android:name=".OptActivity4"
-        android:screenOrientation="portrait"/>
-
-    <activity android:name=".OptActivity3"
-        android:screenOrientation="portrait"/>
-
-    <activity android:name=".OptActivity2"
-        android:screenOrientation="portrait"/>
-
-    <activity android:name=".OptActivity1"
-        android:screenOrientation="portrait"/>
-
-    <activity android:name=".BreakActivity"
-        android:screenOrientation="portrait"/>
-
-    <activity android:name=".MenuActivity"
-        android:screenOrientation="portrait"/>
-
-    <activity android:name=".IntroActivity"
-        android:screenOrientation="portrait"/>
-
-
-    -<activity android:name=".MainActivity">
-
-
-    -<intent-filter>
-
-    <action android:name="android.intent.action.MAIN"/>
-
-    <category android:name="android.intent.category.LAUNCHER"/>
-
-</intent-filter>
-
-</activity>
-
-    <activity android:name=".LeadersActivity"/>
-
-    <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
-
-</application>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
 
 </manifest>
