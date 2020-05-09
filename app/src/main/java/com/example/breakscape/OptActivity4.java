@@ -11,16 +11,21 @@ public class OptActivity4 extends OptActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opt4);
-        setCode();
+        populateCode();
+        populateHintNumber();
         setSolved(getIntent().getExtras().getBoolean("pageSolved"));
         setUpElements();
         addPropertyChangeListener(new MenuActivity());
-
     }
 
     @Override
-    public void setCode() {
-        code = "1234";
+    public void populateCode() {
+        setCode("1345");
+    }
+
+    @Override
+    public void populateHintNumber(){
+        setHintNumber(2);
     }
 
 
