@@ -4,6 +4,35 @@
     <string name="start_btn">Start</string>
     <string name="leaders_btn">Leaderboard</string>
     <string name="exit_btn">Exit</string>
+    <string name="opt1">Phishing</string>
+    <string name="opt2">Passwords</string>
+    <string name="opt3">Encryption</string>
+    <string name="opt4">Internet of things</string>
 
+    <string name="phising1">It\'s one of the oldest types of cyberattacks,
+        dating back to the 1990s, and still one of the most widespread and pernicious. This cyber
+        attack that uses disguised email as a weapon. The goal is to trick the email recipient into
+        believing that the message is something they want or need — a request from their bank,
+        for instance, or a note from someone in their company — and to click a link or download an
+        attachment. The attackers masquerade as a trusted entity.</string>
+    <string name="phising2">If you click on show me the emails button, you will be able to see a
+        selection of different emails that I\'ve been sending to your company. There is 12 examples
+        where only 4 are spam. Please, identify the spam emails and you will have the four digits
+        that will help you to complete this puzzle.</string>
+    <string name="pass1">Password protection is a security process that protects information
+        accessible via computers that needs to be protected from certain users. Password protection
+        allows only those with an authorized password to gain access to certain information.</string>
+    <string name="pass2">By researching on the people who works in your company, I was able to see
+        how bad the passwords were. In this puzzle, I have set an easy password from one of your key workers.
+        Check the information button and see if you can find it as easy as I did.</string>
+    <string name="encryption1">Encryption explanation</string>
+    <string name="encryption2">In this puzzle, I wanted to make more difficult for you to fix my work,
+    so I have encrypted all the texts. I have provided 4 pictures that should be familiar to you.
+        Let\'s see if you are able to get the code that will resolve this puzzle.</string>
+    <string name="usb1">Most modern mobile devices allow you to connect peripheral devices such as
+        external hard drives, printers and cameras using short range wireless connections like
+        Bluetooth, or physical interfaces, such as USB and Thunderbolt.</string>
+    <string name="usb2">This puzzle requires you to identify a code that has been hidden in the USB
+    sticks provided. Find the way between them and you will be closer to the solution.</string>
 
 </resources>

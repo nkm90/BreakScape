@@ -11,7 +11,7 @@
         android:layout_width="354dp"
         android:layout_height="63dp"
         android:fontFamily="@font/vt323"
-        android:text="Access Control"
+        android:text="@string/opt2"
         android:textAlignment="center"
         android:textColor="#32CD32"
         android:textSize="55sp"
@@ -27,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/vt323"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..."
+        android:text="@string/pass1"
         android:textAlignment="center"
         android:textColor="#32CD32"
         android:textSize="22sp"
@@ -43,7 +43,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/vt323"
-        android:text="diff text sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..."
+        android:text="@string/pass2"
         android:textAlignment="center"
         android:textColor="#32CD32"
         android:textSize="22sp"
@@ -181,5 +181,16 @@
             android:text="Main Menu"
             android:textSize="20sp" />
     </LinearLayout>
+    <Button
+        android:id="@+id/game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Staff details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Timer"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
