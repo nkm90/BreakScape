@@ -31,6 +31,8 @@ public class BreakActivity extends Timer {
         num3 = findViewById(R.id.num3);
         num4 = findViewById(R.id.num4);
 
+        startTimer();
+
 
         Button check = (Button) findViewById(R.id.enter);
         check.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +63,7 @@ public class BreakActivity extends Timer {
             startActivity(intent);
             this.finish();
         }else {
-
+            totalAttempts++;
         }
 
     }

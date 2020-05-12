@@ -7,8 +7,10 @@ public class Timer extends AbsActivity{
     static String teamName;
     static long time = 3600000;
     TextView timer;
+    static int totalAttempts;
 
     public void startTimer(){
+        time -= (120000*totalAttempts);
         if (timer != null) {
             new CountDownTimer(time-1000, 1000) {
 
@@ -25,6 +27,7 @@ public class Timer extends AbsActivity{
         }
 
     }
+
 
     private void setTime(long milliseconds){
         long newTime = milliseconds / 1000;
