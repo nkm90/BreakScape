@@ -128,10 +128,8 @@ public abstract class OptActivity extends Timer  {
     protected void checkCode(){
         for( int i=0; i < inputs.size(); i++){
             String text = inputs.get(i).getText().toString();
-            if(text.length() > 0){
-                if(text.charAt(0) != code.charAt(i)) return;
-            }else{
-                return;
+            if(text.length() <1 || text.charAt(0) != code.charAt(i)){
+               return;
             }
         }
         codeCorrect();
