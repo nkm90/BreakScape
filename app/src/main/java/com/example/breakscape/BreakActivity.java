@@ -63,7 +63,7 @@ public class BreakActivity extends Timer {
             startActivity(intent);
             this.finish();
         }else {
-            newAttempts++;
+            totalAttempts++;
         }
 
     }

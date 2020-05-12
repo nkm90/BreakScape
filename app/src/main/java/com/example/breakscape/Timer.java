@@ -7,12 +7,9 @@ public class Timer extends AbsActivity{
     static String teamName;
     static long time = 3600000;
     TextView timer;
-    static int newAttempts;
     static int totalAttempts;
 
     public void startTimer(){
-        totalAttempts += newAttempts;
-
         time -= (120000*totalAttempts);
         if (timer != null) {
             new CountDownTimer(time-1000, 1000) {
