@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/attempts"
         android:layout_width="0dp"
         android:layout_height="59dp"
         android:layout_marginStart="20dp"
@@ -82,10 +82,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView29"
-        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+        app:layout_constraintTop_toBottomOf="@+id/finalTime" />
 
     <TextView
-        android:id="@+id/textView32"
+        android:id="@+id/finalTime"
         android:layout_width="0dp"
         android:layout_height="59dp"
         android:layout_marginStart="20dp"

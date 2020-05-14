@@ -60,6 +60,8 @@ public class BreakActivity extends Timer {
         if(input1.equals("7") && input2.equals("0") && input3.equals("4") && input4.equals("4")){
             //if the answer provided is correct, congratulations activity will appear
             Intent intent = new Intent(this, CongratulationsActivity.class);
+            intent.putExtra("time", time);
+            intent.putExtra("attempts", totalAttempts);
             startActivity(intent);
             this.finish();
         }else {
