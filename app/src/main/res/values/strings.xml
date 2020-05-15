@@ -21,10 +21,11 @@
         that will help you to complete this puzzle.</string>
     <string name="pass1">Password protection is a security process that protects information
         accessible via computers that needs to be protected from certain users. Password protection
-        allows only those with an authorized password to gain access to certain information.</string>
+        allows only those with an authorized password to gain access to certain information. A secure password should be over twelve characters long and consist of both upper and lower case letters.
+    A policy of changing passwords regularly is also good practice</string>
     <string name="pass2">By researching on the people who works in your company, I was able to see
-        how bad the passwords were. In this puzzle, I have set an easy password from one of your key workers.
-        Check the information button and see if you can find it as easy as I did.</string>
+        how bad your passwords were. One of your employees was using a four digit password only containing numbers. This is the code needed below. HINT: passwords should never contain personal information
+    and they should never be dates!</string>
     <string name="encryption1">Encryption explanation</string>
     <string name="encryption2">In this puzzle, I wanted to make more difficult for you to fix my work,
     so I have encrypted all the texts. I have provided 4 pictures that should be familiar to you.

@@ -31,7 +31,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="400dp"
         android:fontFamily="@font/vt323"
-        android:text="You have 60 minutes to complete all the puzzles Clink on the links to learn about a cybersecurity technique. These will help you to complete the puzzles. Begin!"
+        android:text="You have 60 minutes to complete all the puzzles Clink on the links to learn about a cybersecurity topic. These will help you to complete the puzzles. Begin!"
         android:textAlignment="center"
         android:textColor="#32CD32"
         android:textSize="20sp"
