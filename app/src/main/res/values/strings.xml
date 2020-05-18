@@ -26,7 +26,12 @@
     <string name="pass2">By researching on the people who works in your company, I was able to see
         how bad your passwords were. One of your employees was using a four digit password only containing numbers. This is the code needed below. HINT: passwords should never contain personal information
     and they should never be dates!</string>
-    <string name="encryption1">Encryption explanation</string>
+    <string name="encryption1">Encryption is the method by which information is converted
+        into secret code that hides the information\'s true meaning. The science of encrypting and
+        decrypting information is called cryptography. There are three major components to any
+        encryption system: the data, the encryption engine and the key management. The primary
+        purpose of encryption is to protect the confidentiality of digital data stored on computer
+        systems or transmitted over the internet or any other computer network.</string>
     <string name="encryption2">In this puzzle, I wanted to make more difficult for you to fix my work,
     so I have encrypted all the texts. I have provided 4 pictures that should be familiar to you.
         Let\'s see if you are able to get the code that will resolve this puzzle.</string>
