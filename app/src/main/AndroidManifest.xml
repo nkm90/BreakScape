@@ -8,7 +8,8 @@
         android:label="@string/main_title"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <activity android:name=".fullPassActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait" />
@@ -64,9 +65,24 @@
         </activity>
         <activity android:name=".LeadersActivity" />
 
+        <!-- All Leaderboard Activity -->
+        <activity
+            android:name=".AllLeadersActivity"
+            android:label="All Scores" >
+        </activity>
+
+        <!-- Add Leaderboard Entry  Activity -->
+        <activity
+            android:name=".NewLeaderActivity"
+            android:label="Add New Score" >
+        </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+    <!--  Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

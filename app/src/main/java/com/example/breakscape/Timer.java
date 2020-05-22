@@ -25,7 +25,6 @@ public class Timer extends AbsActivity{
                 }
             }.start();
         }
-
     }
 
 

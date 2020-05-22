@@ -62,6 +62,7 @@ public class BreakActivity extends Timer {
             Intent intent = new Intent(this, CongratulationsActivity.class);
             intent.putExtra("time", time);
             intent.putExtra("attempts", totalAttempts);
+            intent.putExtra("teamName", teamName);
             startActivity(intent);
             this.finish();
         }else {
